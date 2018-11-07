@@ -1,12 +1,13 @@
-package QuakeChampions;
+package QuakeChampions.bo.enums;
 
 public enum Maps {
-    AWOKEN("Awoken"),
-    BLOOD_COVENANT("dm6"),
-    BLOOD_RUN("ztn"),
-    CORRUPTED_KEEP("corrupted"),
-    MOLTEN_FALLS("molten"),
-    VALE_OF_PNATH("vale");
+    AWOKEN("awoken"),
+    BLOOD_COVENANT("blood_covenant"),
+    BLOOD_RUN("bloodrun"),
+    CORRUPTED_KEEP("corrupted_keep"),
+    MOLTEN_FALLS("molten_falls"),
+    VALE_OF_PNATH("vale_of_pnath"),
+    RUINS_OF_SARNATH("ruins_of_sarnath");
 
     private String mapName;
 

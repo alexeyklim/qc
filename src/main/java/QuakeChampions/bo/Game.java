@@ -1,4 +1,7 @@
-package QuakeChampions;
+package QuakeChampions.bo;
+
+import QuakeChampions.bo.enums.Champions;
+import QuakeChampions.bo.enums.Maps;
 
 public class Game {
 

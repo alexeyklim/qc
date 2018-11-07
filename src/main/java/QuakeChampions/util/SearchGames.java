@@ -1,8 +1,8 @@
 package QuakeChampions.util;
 
-import QuakeChampions.Champions;
-import QuakeChampions.Game;
-import QuakeChampions.Maps;
+import QuakeChampions.bo.Game;
+import QuakeChampions.bo.enums.Champions;
+import QuakeChampions.bo.enums.Maps;
 
 import java.util.ArrayList;
 import java.util.List;

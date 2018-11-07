@@ -1,4 +1,4 @@
-package QuakeChampions;
+package QuakeChampions.bo.enums;
 
 public enum Champions {
     NONE("none"),

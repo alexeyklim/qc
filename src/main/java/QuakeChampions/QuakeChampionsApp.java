@@ -1,10 +1,12 @@
 package QuakeChampions;
 
+import QuakeChampions.bo.Game;
+import QuakeChampions.bo.enums.Champions;
+import QuakeChampions.bo.enums.Maps;
 import QuakeChampions.util.Autocomplete;
 import QuakeChampions.util.SearchGames;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.FileWriter;
@@ -89,9 +91,12 @@ public class QuakeChampionsApp extends JFrame {
     private ButtonGroup theGameScore;
     private static final String COMMIT_ACTION = "commit";
     public List<String> playersNames;
-    public List<Game> games;
 
     public QuakeChampionsApp(final List<String> playersNames){
+
+
+
+        setTitle("Quake Champions");
 
         currentMap = new ButtonGroup();
         currentMap.add(awokenMap);
@@ -109,6 +114,8 @@ public class QuakeChampionsApp extends JFrame {
         theGameScore.add(lose13);
         theGameScore.add(lose23);
 
+
+        contentPane.setOpaque(false);
         setContentPane(contentPane);
         getRootPane().setDefaultButton(buttonOK);
         buttonOK.addActionListener(new ActionListener() {
@@ -317,21 +324,21 @@ public class QuakeChampionsApp extends JFrame {
     private void createUIComponents() {
         // TODO: place custom component creation code here
         String path = new File("").getAbsolutePath();
-        final String rangerFile = "\\resources\\images\\ranger2.png";
+        final String rangerFile = "\\resources\\images\\champions\\ranger2.png";
         ranger = new JLabel(new ImageIcon(path+rangerFile));
-        anarki = new JLabel(new ImageIcon(path + "\\resources\\images\\anarki2.png"));
-        athena = new JLabel(new ImageIcon(path + "\\resources\\images\\athena2.png"));
+        anarki = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\anarki2.png"));
+        athena = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\athena2.png"));
         bj = new JLabel(new ImageIcon(path + "\\resources\\images\\bj2.png"));
-        clutch = new JLabel(new ImageIcon(path + "\\resources\\images\\clutch2.png"));
-        deathknight = new JLabel(new ImageIcon(path + "\\resources\\images\\deathknight2.png"));
-        galena = new JLabel(new ImageIcon(path + "\\resources\\images\\galena2.png"));
-        keel = new JLabel(new ImageIcon(path + "\\resources\\images\\keel2.png"));
-        nyx = new JLabel(new ImageIcon(path + "\\resources\\images\\nyx2.png"));
-        scalebearer = new JLabel(new ImageIcon(path + "\\resources\\images\\scalebearer2.png"));
-        slash = new JLabel(new ImageIcon(path + "\\resources\\images\\slash2.png"));
-        sorlag = new JLabel(new ImageIcon(path + "\\resources\\images\\sorlag2.png"));
-        strogg = new JLabel(new ImageIcon(path + "\\resources\\images\\strogg2.png"));
-        visor = new JLabel(new ImageIcon(path + "\\resources\\images\\visor2.png"));
-        doom = new JLabel(new ImageIcon(path + "\\resources\\images\\doom2.png"));
+        clutch = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\clutch2.png"));
+        deathknight = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\deathknight2.png"));
+        galena = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\galena2.png"));
+        keel = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\keel2.png"));
+        nyx = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\nyx2.png"));
+        scalebearer = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\scalebearer2.png"));
+        slash = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\slash2.png"));
+        sorlag = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\sorlag2.png"));
+        strogg = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\strogg2.png"));
+        visor = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\visor2.png"));
+        doom = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\doom2.png"));
     }
 }

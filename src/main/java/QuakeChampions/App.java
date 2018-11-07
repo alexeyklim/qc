@@ -1,8 +1,14 @@
 package QuakeChampions;
 
 
+import QuakeChampions.bo.Game;
+import QuakeChampions.json.JsonParserHelper;
+import QuakeChampions.json.matchresults.Match;
+import QuakeChampions.util.Config;
 import QuakeChampions.util.SearchGames;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -13,14 +19,29 @@ import java.util.List;
 public class App
 {
     public static void main(String[] args) throws IOException {
+        JsonParserHelper.getInstance().getJavaObjectFromJson(JsonParserHelper.getInstance().getJsonFromUrl(Config.GAME_RESULTS + "3c5a2525-e285-11e8-af10-0003ffb80013&playerName=whybe"), Match.class);
+        String config = Config.DEFAULT_PATH;
         final String PLAYERS_NAMES = "\\resources\\files\\names";
         final String GAMES = "\\resources\\files\\games";
         String path = new File("").getAbsolutePath();
         SearchGames searchGames = new SearchGames();
+
+        ImagePanel pp = new ImagePanel();
+        pp.setLayout(new BorderLayout());
+        try {
+            pp.setImage(ImageIO.read(new File(Config.CHAMPION_IMAGES_PATH + "QuakeChampions.jpg")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         List<String> names = Files.readAllLines(Paths.get(path + PLAYERS_NAMES), StandardCharsets.UTF_8);
         List<Game> games = searchGames.collectAllGames(Files.readAllLines(Paths.get(path + GAMES), StandardCharsets.UTF_8));
         QuakeChampionsApp dialog = new QuakeChampionsApp(names);
         dialog.pack();
         dialog.setVisible(true);
+        TESTWINDOW test = new TESTWINDOW();
+        test.pack();
+        test.setVisible(true);
     }
 }
