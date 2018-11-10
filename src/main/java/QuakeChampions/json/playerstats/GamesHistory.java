@@ -17,4 +17,12 @@ public class GamesHistory {
 
     @SerializedName("sessionId")
     private String sessionId;
+
+    public int getGamesPlayed() {
+        return gamesPlayed;
+    }
+
+    public void setGamesPlayed(int gamesPlayed) {
+        this.gamesPlayed = gamesPlayed;
+    }
 }

@@ -8,6 +8,7 @@ import QuakeChampions.util.Config;
 import QuakeChampions.util.SearchGames;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -19,20 +20,15 @@ import java.util.List;
 public class App
 {
     public static void main(String[] args) throws IOException {
-        JsonParserHelper.getInstance().getJavaObjectFromJson(JsonParserHelper.getInstance().getJsonFromUrl(Config.GAME_RESULTS + "3c5a2525-e285-11e8-af10-0003ffb80013&playerName=whybe"), Match.class);
+//        QL ql = new QL();
+//        ql.pack();
+//        ql.setVisible(true);
+        //JsonParserHelper.getInstance().getJavaObjectFromJson(JsonParserHelper.getInstance().getJsonFromUrl(Config.GAME_RESULTS + "3c5a2525-e285-11e8-af10-0003ffb80013&playerName=whybe"), Match.class);
         String config = Config.DEFAULT_PATH;
         final String PLAYERS_NAMES = "\\resources\\files\\names";
         final String GAMES = "\\resources\\files\\games";
         String path = new File("").getAbsolutePath();
         SearchGames searchGames = new SearchGames();
-
-        ImagePanel pp = new ImagePanel();
-        pp.setLayout(new BorderLayout());
-        try {
-            pp.setImage(ImageIO.read(new File(Config.CHAMPION_IMAGES_PATH + "QuakeChampions.jpg")));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
 
         List<String> names = Files.readAllLines(Paths.get(path + PLAYERS_NAMES), StandardCharsets.UTF_8);

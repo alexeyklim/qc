@@ -114,8 +114,6 @@ public class QuakeChampionsApp extends JFrame {
         theGameScore.add(lose13);
         theGameScore.add(lose23);
 
-
-        contentPane.setOpaque(false);
         setContentPane(contentPane);
         getRootPane().setDefaultButton(buttonOK);
         buttonOK.addActionListener(new ActionListener() {
@@ -328,7 +326,7 @@ public class QuakeChampionsApp extends JFrame {
         ranger = new JLabel(new ImageIcon(path+rangerFile));
         anarki = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\anarki2.png"));
         athena = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\athena2.png"));
-        bj = new JLabel(new ImageIcon(path + "\\resources\\images\\bj2.png"));
+        bj = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\bj2.png"));
         clutch = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\clutch2.png"));
         deathknight = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\deathknight2.png"));
         galena = new JLabel(new ImageIcon(path + "\\resources\\images\\champions\\galena2.png"));

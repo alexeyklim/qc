@@ -13,4 +13,12 @@ public class Duel {
 
     @SerializedName("history")
     private List<GamesHistory> gamesHistoryList;
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
 }

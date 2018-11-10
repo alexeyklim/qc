@@ -13,4 +13,27 @@ public class Stats {
     @SerializedName("playerLevelState")
     private PlayerLevelState playerLevelState;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public PlayerRatings getPlayerRatings() {
+        return playerRatings;
+    }
+
+    public void setPlayerRatings(PlayerRatings playerRatings) {
+        this.playerRatings = playerRatings;
+    }
+
+    public PlayerLevelState getPlayerLevelState() {
+        return playerLevelState;
+    }
+
+    public void setPlayerLevelState(PlayerLevelState playerLevelState) {
+        this.playerLevelState = playerLevelState;
+    }
 }
